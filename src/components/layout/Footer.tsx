@@ -5,27 +5,27 @@ import { Input } from '@/components/ui/input';
 import { Github, Twitter, Linkedin } from 'lucide-react';
 const footerLinks = {
   Product: [
-    { name: 'Features', href: '#' },
-    { name: 'Pricing', href: '#' },
-    { name: 'Integrations', href: '#' },
-    { name: 'API', href: '#' },
+    { name: 'Features', href: '/features' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Integrations', href: '/integrations' },
+    { name: 'API', href: '/developers/api' },
   ],
   Company: [
-    { name: 'About Us', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ],
   Resources: [
-    { name: 'Documentation', href: '#' },
-    { name: 'Support', href: '#' },
-    { name: 'Case Studies', href: '#' },
-    { name: 'Webinars', href: '#' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Support', href: '/support' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Webinars', href: '/webinars' },
   ],
   Legal: [
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' },
-    { name: 'Cookie Policy', href: '#' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
   ],
 };
 const socialLinks = [
@@ -119,7 +119,10 @@ export function Footer() {
             <p className="mt-4 text-base text-slate-500">
               The latest news, articles, and resources, sent to your inbox weekly.
             </p>
-            <form className="mt-4 sm:flex sm:max-w-md">
+            <form
+              className="mt-4 sm:flex sm:max-w-md"
+              onSubmit={(e) => e.preventDefault()}
+            >
               <label htmlFor="email-address" className="sr-only">
                 Email address
               </label>
